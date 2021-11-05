@@ -4,6 +4,7 @@ from datetime import datetime  # Primarily used to reformat datetime strings
 import plotly.express as px
 import plotly.graph_objects as go
 from sklearn.linear_model import LinearRegression
+import requests
 
 import numpy as np
 import pandas as pd
@@ -18,7 +19,24 @@ import streamlit as st
 
 @st.cache(hash_funcs={pd.DataFrame: lambda _: None})
 def main_df():
-    return pd.read_feather("data/combined.feather")
+    try:
+        df = pd.read_feather("data/combined.feather")
+        return df
+    except:
+        combined_url = "https://github.com/Rykarix/MTHM501_Project/blob/master/data/combined.feather"
+        df = pd.read_feather(request.FILES[combined_url])
+        return df
+
+
+@st.cache(hash_funcs={pd.DataFrame: lambda _: None})
+def av_df():
+    try:
+        df_av = pd.read_feather("data/df_av.feather")
+        return df_av
+    except:
+        av_url = "https://github.com/Rykarix/MTHM501_Project/blob/master/data/df_av.feather"
+        df_av = pd.read_feather(request.FILES[av_url])
+        return df_av
 
 
 @st.cache(hash_funcs={pd.DataFrame: lambda _: None})
@@ -108,7 +126,7 @@ So has the average price increased over time :
 # df_av = df.groupby("Year").mean()
 # df_av = df_av.reset_index()
 # df_av.to_feather("data/df_av.feather")
-df_av = pd.read_feather("data/df_av.feather")
+df_av = av_df()
 fig = go.Figure()
 fig.add_trace(
     go.Scatter(
