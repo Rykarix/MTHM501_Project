@@ -1,0 +1,3 @@
+python -m pip install -U plotly
+python -m pip install -U pandas
+python -m pip install -U scikit-learn
