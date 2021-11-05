@@ -9,12 +9,15 @@ import requests
 import numpy as np
 import pandas as pd
 
+
 pd.set_option("precision", 0)
 pd.set_option("chop_threshold", 0.05)
 pd.set_option("colheader_justify", "right")
 pd.options.display.float_format = "{:,.2f}".format
 
 import streamlit as st
+
+st.set_page_config(page_title="Project Diary", layout="wide")
 
 
 @st.cache(hash_funcs={pd.DataFrame: lambda _: None})
