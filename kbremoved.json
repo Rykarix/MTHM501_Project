@@ -1,0 +1,54 @@
+{
+    "key": "tab",
+    "command": "-text-tables.gotoNextCell",
+    "when": "tableMode"
+},
+{
+    "key": "tab",
+    "command": "tab"
+},
+{
+    "key": "tab",
+    "command": "-editor.emmet.action.expandAbbreviation",
+    "when": "config.emmet.triggerExpansionOnTab && editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+},
+{
+    "key": "tab",
+    "command": "-markdown.extension.onTabKey",
+    "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus && !hasOtherSuggestions && !hasSnippetCompletions && !inSnippetMode && !suggestWidgetVisible && editorLangId == 'markdown'"
+},
+{
+    "key": "tab",
+    "command": "-insertSnippet",
+    "when": "editorTextFocus && hasSnippetCompletions && !editorTabMovesFocus && !inSnippetMode"
+},
+{
+    "key": "tab",
+    "command": "-jumpToNextSnippetPlaceholder",
+    "when": "editorTextFocus && hasNextTabstop && inSnippetMode"
+},
+{
+    "key": "tab",
+    "command": "-insertNextSuggestion",
+    "when": "hasOtherSuggestions && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
+},
+{
+    "key": "tab",
+    "command": "-insertBestCompletion",
+    "when": "atEndOfWord && textInputFocus && !hasOtherSuggestions && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
+},
+{
+    "key": "tab",
+    "command": "-editor.action.inlineSuggest.commit",
+    "when": "inlineSuggestionVisible && !editorTabMovesFocus && !inlineSuggestionHasIndentation"
+},
+{
+    "key": "tab",
+    "command": "-acceptSelectedSuggestion",
+    "when": "suggestWidgetVisible && textInputFocus"
+},
+{
+    "key": "tab",
+    "command": "-tab",
+    "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+}
