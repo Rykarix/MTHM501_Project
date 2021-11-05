@@ -227,8 +227,9 @@ st.plotly_chart(fig, use_container_width=True)
 st.markdown(
     """
 
-### Per county comparisons
+## Per county comparisons
 
+Comparison between different states & the radius of each point corresponds to the number of sales 
 """
 )
 
