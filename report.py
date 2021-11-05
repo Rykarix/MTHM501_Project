@@ -1,3 +1,4 @@
+#%%
 import re, sys, os
 from io import StringIO
 from datetime import datetime  # Primarily used to reformat datetime strings
@@ -95,7 +96,7 @@ with st.expander("Explanation of column names & excluded data"):
 
     exclusion_col.markdown(
         """
-            ### Data excluded from Price Paid Data
+    ### Data excluded from Price Paid Data
 
     Our Price Paid Data includes information on all residential property sales in England and Wales that are sold for value and are lodged with us for registration.
 
