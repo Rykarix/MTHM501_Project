@@ -31,6 +31,8 @@ scikit-learn = "^1.0.1"
 plotly = "^5.3.1"
 sklearn = "^0.0"
 streamlit = "^1.1.0"
+requests = "^2.26.0"
+importlib-resources = "^5.4.0"
 
 [tool.poetry.dev-dependencies]
 
