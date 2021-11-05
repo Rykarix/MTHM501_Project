@@ -131,3 +131,10 @@ dmypy.json
 # Folders
 data/range
 data/old
+
+# Other
+pyproject.toml
+pydownloader.py
+TEST.PY
+kbremoved.json
+gps_cache_towns.db
